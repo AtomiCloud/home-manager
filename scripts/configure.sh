@@ -1,5 +1,5 @@
 #!/usr/bin/env nix
-#! nix shell nixpkgs#coreutil nixpkgs#bash --command bash
+#! nix shell nixpkgs#coreutils nixpkgs#bash --command bash
 # shellcheck shell=bash
 
 profile_user="$USER"
