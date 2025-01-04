@@ -30,5 +30,5 @@ echo "✅ Synced Home Manager!"
 
 curl -L https://raw.githubusercontent.com/AtomiCloud/home-manager/main/scripts/configure.sh >/tmp/configure.sh
 chmod +x /tmp/configure.sh
-./configure.sh
+/tmp/configure.sh
 rm /tmp/configure.sh
