@@ -28,4 +28,7 @@ echo "🔄 Syncing Home Manager..."
 nix run nixpkgs#git -- clone https://github.com/AtomiCloud/home-manager.git ~/.config/home-manager
 echo "✅ Synced Home Manager!"
 
-curl -L https://raw.githubusercontent.com/AtomiCloud/home-manager/main/scripts/configure.sh | sh
+curl -L https://raw.githubusercontent.com/AtomiCloud/home-manager/main/scripts/configure.sh >/tmp/configure.sh
+chmod +x /tmp/configure.sh
+./configure.sh
+rm /tmp/configure.sh
