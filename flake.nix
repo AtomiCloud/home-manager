@@ -46,7 +46,7 @@
             pkgs-2411 = import nixpkgs-2411 { inherit system; config.allowUnfree = true; };
             pre-commit-lib = pre-commit-hooks.lib.${system};
             atomi = atomipkgs.packages.${system};
-            atomi-upstream = atomi-upstream-pkgs.packages.${system};
+            atomi-upstream = atomi-upstream-pkgs.lib.${system};
           in
           {
             name = profile.user;

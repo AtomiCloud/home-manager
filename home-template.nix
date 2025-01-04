@@ -14,7 +14,6 @@ let
   };
 in
 with pkgs;
-with modules;
 {
 
   # Let Home Manager install and manage itself.
