@@ -27,3 +27,5 @@ echo "✅ Remove existing Home Manager configuration!"
 echo "🔄 Syncing Home Manager..."
 nix run nixpkgs#git -- clone https://github.com/AtomiCloud/home-manager.git ~/.config/home-manager
 echo "✅ Synced Home Manager!"
+
+curl -L https://raw.githubusercontent.com/AtomiCloud/home-manager/main/scripts/configure.sh | sh
