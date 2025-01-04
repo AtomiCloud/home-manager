@@ -7,8 +7,10 @@ profile_arch="$(uname -m)"
 [ "$profile_arch" == 'arm64' ] && profile_arch="aarch64"
 profile_kernel="$(uname -s | tr '[:upper:]' '[:lower:]')"
 
-read -r "❓ Enter your Github Email: " profile_email
-read -r "❓ Enter your Github Username: " profile_username
+echo "❓ Enter your Github Email: "
+read -r profile_email
+echo "❓ Enter your Github Username: "
+read -r profile_username
 
 profile=$(
   cat <<EOF
