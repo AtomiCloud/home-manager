@@ -7,8 +7,8 @@ profile_arch="$(uname -m)"
 [ "$profile_arch" == 'arm64' ] && profile_arch="aarch64"
 profile_kernel="$(uname -s | tr '[:upper:]' '[:lower:]')"
 
-read -rp "❓ Enter your Github Email: " profile_email
-read -rp "❓ Enter your Github Username: " profile_username
+read -r "❓ Enter your Github Email: " profile_email
+read -r "❓ Enter your Github Username: " profile_username
 
 profile=$(
   cat <<EOF
@@ -34,3 +34,11 @@ nix run home-manager/release-24.11 -- switch
 # shellcheck disable=SC1090
 source ~/.zshrc
 echo "✅ Home Manager Switched!"
+
+echo "🗑️ Removing Git from home-manager"
+rm -rf ~/.config/home-manager/.git
+echo "✅ Git removed"
+
+echo "🆕 Initializing new git"
+git init ~/.config/home-manager
+echo "✅ Git initialized"
