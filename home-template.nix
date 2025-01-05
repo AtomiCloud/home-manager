@@ -43,7 +43,7 @@ with pkgs;
       ([
         pinentry-curses
         pinentry_mac
-        nerdfonts
+        nerd-fonts.jetbrains-mono
       ]))
   );
 
@@ -84,6 +84,8 @@ with pkgs;
 
     ssh = {
       enable = true;
+      extraConfig = ''
+      '';
     };
 
     git = {
