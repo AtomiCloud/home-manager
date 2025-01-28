@@ -11,7 +11,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-2411.url = "nixpkgs/nixos-24.11";
 
-    atomipkgs.url = "github:AtomiCloud/nix-registry/v1.0.0";
+    atomipkgs.url = "github:AtomiCloud/nix-registry/v1";
     atomi-upstream-pkgs.url = "github:AtomiCloud/home-manager-upstream";
 
     home-manager = {
