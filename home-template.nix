@@ -19,7 +19,16 @@ with pkgs;
   # Let Home Manager install and manage itself.
   home.stateVersion = "24.11";
   home.username = "${profile.user}";
-  home.homeDirectory = if profile.kernel == "linux" then "/home/${profile.user}" else "/Users/${profile.user}";
+  home.homeDirectory =
+    if profile.kernel == "linux"
+    then
+      (
+        if profile.user == "root" then
+          "/root"
+        else
+          "/home/${profile.user}"
+      )
+    else "/Users/${profile.user}";
 
   programs.home-manager.enable = true;
 

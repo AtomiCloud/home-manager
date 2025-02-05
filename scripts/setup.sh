@@ -16,7 +16,7 @@ set +eou
 . /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
 set -eou
 
-if [ ! -d "/path/to/folder" ]; then
+if [ ! -d "$HOME/.config/home-manager" ]; then
   echo "⏬ Installing Home Manager..."
   nix run home-manager/release-24.11 -- init --switch
   echo "✅ Home Manager completed!"
