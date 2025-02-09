@@ -148,6 +148,7 @@ with pkgs;
       enable = true;
       enableCompletion = false;
       initExtra = ''
+        if [ -e $HOME/.secrets ]; then . $HOME/.secrets; fi
       '';
 
       oh-my-zsh = {
@@ -156,6 +157,7 @@ with pkgs;
           ZSH_CUSTOM="${customDir}"
           zstyle ':completion:*:*:man:*:*' menu select=long search
           zstyle ':autocomplete:*' recent-dirs zoxide
+
         '';
         plugins = [
           "git"
